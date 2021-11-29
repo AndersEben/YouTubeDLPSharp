@@ -83,7 +83,7 @@ namespace YouTubeDLPSharp.Options
         /// For example &quot;gvsearch2:&quot; downloads two
         /// videos from google videos for youtube-
         /// dl &quot;large apple&quot;. Use the value &quot;auto&quot;
-        /// to let youtube-dl guess (&quot;auto_warning&quot;
+        /// to let youtube-dlp guess (&quot;auto_warning&quot;
         /// to emit a warning when guessing).
         /// &quot;error&quot; just throws an error. The
         /// default value &quot;fixup_error&quot; repairs

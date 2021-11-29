@@ -97,7 +97,7 @@ namespace YouTubeDLPSharp.Options
         }
 
         /// <summary>
-        /// Loads an option set from a youtube-dl config file.
+        /// Loads an option set from a youtube-dlp config file.
         /// </summary>
         /// <param name="path">The path to the config file.</param>
         /// <returns>The loaded OptionSet.</returns>

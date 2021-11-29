@@ -21,16 +21,16 @@ namespace YouTubeDLPSharp
             @"\[download\]\s+(?:(?<percent>[\d\.]+)%(?:\s+of\s+\~?(?<total>[\d\.\w]+))?\s+at\s+(?:(?<speed>[\d\.\w]+\/s)|[\w\s]+)\s+ETA\s(?<eta>[\d\:]+))?",
             RegexOptions.Compiled
         );
-        // the regex used to match the beginning of post-processing.
+        // the regex used to match the beginning of ffmpeg.
         private static readonly Regex rgxPost = new Regex(@"\[ffmpeg\]\s+", RegexOptions.Compiled);
 
-        // the regex used to match the beginning of post-processing.
+        // the regex used to match the beginning of youtube.
         private static readonly Regex rgxYoutube = new Regex(@"\[youtube\]\s+(?<id>[A-Za-z0-9]\w+)?:\s(?<mess>.*)", RegexOptions.Compiled);
-        // the regex used to match the beginning of post-processing.
+        // the regex used to match the beginning of info.
         private static readonly Regex rgxInfo = new Regex(@"\[info\]\s+(?<mess>.*)", RegexOptions.Compiled);
-        // the regex used to match the beginning of post-processing.
+        // the regex used to match the beginning of VideoConvertor.
         private static readonly Regex rgxConverter = new Regex(@"\[VideoConvertor\]\s+(?<mess>.*)", RegexOptions.Compiled);
-        // the regex used to match the beginning of post-processing.
+        // the regex used to match the beginning of Merger.
         private static readonly Regex rgxMerger = new Regex(@"\[Merger\]\s+(?<mess>.*)", RegexOptions.Compiled);
 
 

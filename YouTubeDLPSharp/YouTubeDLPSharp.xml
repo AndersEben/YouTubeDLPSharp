@@ -174,7 +174,7 @@
         </member>
         <member name="M:YouTubeDLPSharp.Options.OptionSet.LoadConfigFile(System.String)">
             <summary>
-            Loads an option set from a youtube-dl config file.
+            Loads an option set from a youtube-dlp config file.
             </summary>
             <param name="path">The path to the config file.</param>
             <returns>The loaded OptionSet.</returns>
@@ -324,7 +324,7 @@
         <member name="P:YouTubeDLPSharp.Options.OptionSet.Continue">
             <summary>
             Force resume of partially downloaded
-            files. By default, youtube-dl will
+            files. By default, youtube-dlp will
             resume downloads if possible.
             </summary>
         </member>
@@ -380,10 +380,10 @@
         <member name="P:YouTubeDLPSharp.Options.OptionSet.CacheDir">
             <summary>
             Location in the filesystem where
-            youtube-dl can store some downloaded
+            youtube-dlp can store some downloaded
             information permanently. By default
-            $XDG_CACHE_HOME/youtube-dl or ~/.cache
-            /youtube-dl . At the moment, only
+            $XDG_CACHE_HOME/youtube-dlp or ~/.cache
+            /youtube-dlp . At the moment, only
             YouTube player files (for videos with
             obfuscated signatures) are cached, but
             that may change.
@@ -466,7 +466,7 @@
             For example &quot;gvsearch2:&quot; downloads two
             videos from google videos for youtube-
             dl &quot;large apple&quot;. Use the value &quot;auto&quot;
-            to let youtube-dl guess (&quot;auto_warning&quot;
+            to let youtube-dlp guess (&quot;auto_warning&quot;
             to emit a warning when guessing).
             &quot;error&quot; just throws an error. The
             default value &quot;fixup_error&quot; repairs
@@ -878,7 +878,7 @@
         </member>
         <member name="T:YouTubeDLPSharp.RunResult`1">
             <summary>
-            Encapsulates the output of a youtube-dl download operation.
+            Encapsulates the output of a youtube-dlp download operation.
             </summary>
             <typeparam name="T"></typeparam>
         </member>
@@ -930,7 +930,7 @@
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.YoutubeDLPath">
             <summary>
-            Path to the youtube-dl executable.
+            Path to the youtube-dlp executable.
             </summary>
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.FFmpegPath">
@@ -945,7 +945,7 @@
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.OutputFileTemplate">
             <summary>
-            Template of the name of the downloaded file on youtube-dl style.
+            Template of the name of the downloaded file on youtube-dlp style.
             See https://github.com/ytdl-org/youtube-dl#output-template.
             </summary>
         </member>
@@ -987,7 +987,7 @@
             Runs a download of the specified video with an optional conversion afterwards.
             </summary>
             <param name="url">The URL of the video to be downloaded.</param>
-            <param name="format">A format selection string in youtube-dl style.</param>
+            <param name="format">A format selection string in youtube-dlp style.</param>
             <param name="mergeFormat">If a merge is required, the container format of the merged downloads.</param>
             <param name="recodeFormat">The video format the output will be recoded to after download.</param>
             <param name="ct">A CancellationToken used to cancel the download.</param>

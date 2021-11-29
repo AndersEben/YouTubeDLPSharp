@@ -22,9 +22,9 @@ namespace YouTubeDLPSharp
         protected ProcessRun runner;
 
         /// <summary>
-        /// Path to the youtube-dl executable.
+        /// Path to the youtube-dlp executable.
         /// </summary>
-        public string YoutubeDLPath { get; set; } = "yt-dlp.exe";
+        public string YoutubeDLPPath { get; set; } = "yt-dlp.exe";
         /// <summary>
         /// Path to the FFmpeg executable.
         /// </summary>
@@ -34,7 +34,7 @@ namespace YouTubeDLPSharp
         /// </summary>
         public string OutputFolder { get; set; } = Environment.CurrentDirectory;
         /// <summary>
-        /// Template of the name of the downloaded file on youtube-dl style.
+        /// Template of the name of the downloaded file on youtube-dlp style.
         /// See https://github.com/ytdl-org/youtube-dl#output-template.
         /// </summary>
         public string OutputFileTemplate { get; set; } = "%(title)s.%(ext)s";
@@ -101,7 +101,7 @@ namespace YouTubeDLPSharp
             opts.SkipDownload = true;
 
             VideoData videoData = null;
-            var process = new YouTubeDLPProcess(YoutubeDLPath);
+            var process = new YouTubeDLPProcess(YoutubeDLPPath);
             process.OutputReceived += (o, e) => videoData = JsonConvert.DeserializeObject<VideoData>(e.Data);
             (int code, string[] errors) = await runner.RunThrottled(process, new[] { url }, opts, ct);
             return new RunResult<VideoData>(code == 0, errors, videoData);
@@ -111,7 +111,7 @@ namespace YouTubeDLPSharp
         /// Runs a download of the specified video with an optional conversion afterwards.
         /// </summary>
         /// <param name="url">The URL of the video to be downloaded.</param>
-        /// <param name="format">A format selection string in youtube-dl style.</param>
+        /// <param name="format">A format selection string in youtube-dlp style.</param>
         /// <param name="mergeFormat">If a merge is required, the container format of the merged downloads.</param>
         /// <param name="recodeFormat">The video format the output will be recoded to after download.</param>
         /// <param name="ct">A CancellationToken used to cancel the download.</param>
@@ -143,8 +143,8 @@ namespace YouTubeDLPSharp
             }
 
             string outputFile = String.Empty;
-            var process = new YouTubeDLPProcess(YoutubeDLPath);
-            // Report the used ytdl args
+            var process = new YouTubeDLPProcess(YoutubeDLPPath);
+            // Report the used ytdlp args
             output?.Report($"Arguments: {process.ConvertToArgs(new[] { url }, opts)}\n");
             process.OutputReceived += (o, e) =>
             {
@@ -193,8 +193,8 @@ namespace YouTubeDLPSharp
 
             string outputFile = String.Empty;
             var error = new List<string>();
-            var process = new YouTubeDLPProcess(YoutubeDLPath);
-            // Report the used ytdl args
+            var process = new YouTubeDLPProcess(YoutubeDLPPath);
+            // Report the used ytdlp args
             output?.Report($"Arguments: {process.ConvertToArgs(new[] { url }, opts)}\n");
             process.OutputReceived += (o, e) =>
             {
@@ -229,9 +229,6 @@ namespace YouTubeDLPSharp
                 NoPart = true,
                 FfmpegLocation = Utils.GetFullPath(this.FFmpegPath),
                 //PostprocessorArgs = "",
-                /* TODO This is used to retrieve the final file path.
-                 * Could be replaced by https://github.com/ytdl-org/youtube-dl/pull/22769.
-                 */
                 Exec = "echo {}"
             };
         }

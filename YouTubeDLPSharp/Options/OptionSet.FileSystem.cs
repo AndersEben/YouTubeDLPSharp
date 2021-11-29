@@ -68,7 +68,7 @@ namespace YouTubeDLPSharp.Options
         public bool NoOverwrites { get => noOverwrites.Value; set => noOverwrites.Value = value; }
         /// <summary>
         /// Force resume of partially downloaded
-        /// files. By default, youtube-dl will
+        /// files. By default, youtube-dlp will
         /// resume downloads if possible.
         /// </summary>
         public bool Continue { get => doContinue.Value; set => doContinue.Value = value; }
@@ -115,10 +115,10 @@ namespace YouTubeDLPSharp.Options
         public string Cookies { get => cookies.Value; set => cookies.Value = value; }
         /// <summary>
         /// Location in the filesystem where
-        /// youtube-dl can store some downloaded
+        /// youtube-dlp can store some downloaded
         /// information permanently. By default
-        /// $XDG_CACHE_HOME/youtube-dl or ~/.cache
-        /// /youtube-dl . At the moment, only
+        /// $XDG_CACHE_HOME/youtube-dlp or ~/.cache
+        /// /youtube-dlp . At the moment, only
         /// YouTube player files (for videos with
         /// obfuscated signatures) are cached, but
         /// that may change.
