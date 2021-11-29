@@ -35,7 +35,7 @@ namespace YouTubeDLPSharp
         public string OutputFolder { get; set; } = Environment.CurrentDirectory;
         /// <summary>
         /// Template of the name of the downloaded file on youtube-dlp style.
-        /// See https://github.com/ytdl-org/youtube-dl#output-template.
+        /// See https://github.com/yt-dlp/yt-dlp#output-template.
         /// </summary>
         public string OutputFileTemplate { get; set; } = "%(title)s.%(ext)s";
         /// <summary>
@@ -43,11 +43,7 @@ namespace YouTubeDLPSharp
         /// </summary>
         public bool RestrictFilenames { get; set; } = false;
 
-        /* TODO IMPORTANT This flag does not work fully as expected:
-         * Does not guarantee overwrites (see https://github.com/ytdl-org/youtube-dl/pull/20405)
-         * Always overwrites post-processed files
-         * (see https://github.com/ytdl-org/youtube-dl/issues/5173, https://github.com/ytdl-org/youtube-dl/issues/333)
-         */
+
         public bool OverwriteFiles { get; set; } = true;
 
         /// <summary>

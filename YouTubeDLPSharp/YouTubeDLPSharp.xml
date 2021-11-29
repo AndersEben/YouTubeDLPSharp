@@ -945,8 +945,8 @@
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.OutputFileTemplate">
             <summary>
-            Template of the name of the downloaded file on youtube-dlp style.
-            See https://github.com/ytdl-org/youtube-dl#output-template.
+              Template of the name of the downloaded file on youtube-dlp style.
+              See https://github.com/yt-dlp/yt-dlp#output-template.
             </summary>
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.RestrictFilenames">
