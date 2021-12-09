@@ -4,7 +4,7 @@
 namespace YouTubeDLPSharp.Data
 {
     /// <summary>
-    /// Possible types of media fetched by youtube-dl.
+    /// Possible types of media fetched by youtube-dlp.
     /// </summary>
     public enum MetadataType
     {
