@@ -119,7 +119,7 @@ namespace YouTubeDLPSharp
         public async Task<RunResult<string>> RunVideoDownload(string url,
             string format = "bestvideo*+bestaudio/best",
             DownloadMergeFormat mergeFormat = DownloadMergeFormat.Unspecified,
-            VideoRecodeFormat recodeFormat = VideoRecodeFormat.Mp4,
+            VideoRecodeFormat recodeFormat = VideoRecodeFormat.None,
             CancellationToken ct = default, IProgress<DownloadProgress> progress = null,
             IProgress<string> output = null, OptionSet overrideOptions = null, string postprocess = null)
         {

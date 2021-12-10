@@ -11,7 +11,7 @@
         </member>
         <member name="T:YouTubeDLPSharp.Data.MetadataType">
             <summary>
-            Possible types of media fetched by youtube-dl.
+            Possible types of media fetched by youtube-dlp.
             </summary>
         </member>
         <member name="T:YouTubeDLPSharp.Data.VideoData">
@@ -928,7 +928,7 @@
             A class providing methods for downloading videos using youtube-dl.
             </summary>
         </member>
-        <member name="P:YouTubeDLPSharp.YouTubeDLP.YoutubeDLPath">
+        <member name="P:YouTubeDLPSharp.YouTubeDLP.YoutubeDLPPath">
             <summary>
             Path to the youtube-dlp executable.
             </summary>
@@ -945,8 +945,8 @@
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.OutputFileTemplate">
             <summary>
-              Template of the name of the downloaded file on youtube-dlp style.
-              See https://github.com/yt-dlp/yt-dlp#output-template.
+            Template of the name of the downloaded file on youtube-dlp style.
+            See https://github.com/yt-dlp/yt-dlp#output-template.
             </summary>
         </member>
         <member name="P:YouTubeDLPSharp.YouTubeDLP.RestrictFilenames">
