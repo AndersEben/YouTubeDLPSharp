@@ -982,7 +982,7 @@
             <param name="overrideOptions">Override options of the default option set for this run.</param>
             <returns>A RunResult object containing a VideoData object with the requested video information.</returns>
         </member>
-        <member name="M:YouTubeDLPSharp.YouTubeDLP.RunVideoDownload(System.String,System.String,YouTubeDLPSharp.Options.DownloadMergeFormat,YouTubeDLPSharp.Options.VideoRecodeFormat,System.Threading.CancellationToken,System.IProgress{YouTubeDLPSharp.DownloadProgress},System.IProgress{System.String},YouTubeDLPSharp.Options.OptionSet,System.String)">
+        <member name="M:YouTubeDLPSharp.YouTubeDLP.RunVideoDownload(System.String,System.String,YouTubeDLPSharp.Options.DownloadMergeFormat,YouTubeDLPSharp.Options.VideoRecodeFormat,System.Threading.CancellationToken,System.IProgress{YouTubeDLPSharp.DownloadProgress},System.IProgress{System.String},YouTubeDLPSharp.Options.OptionSet,System.Boolean)">
             <summary>
             Runs a download of the specified video with an optional conversion afterwards.
             </summary>
@@ -994,7 +994,7 @@
             <param name="progress">A progress provider used to get download progress information.</param>
             <param name="output">A progress provider used to capture the standard output.</param>
             <param name="overrideOptions">Override options of the default option set for this run.</param>
-            <param name="postprocess">Neu</param>
+            <param name="WriteJson">Neu</param>
             <returns>A RunResult object containing the path to the downloaded and converted video.</returns>
         </member>
         <member name="M:YouTubeDLPSharp.YouTubeDLP.RunAudioDownload(System.String,YouTubeDLPSharp.Options.AudioConversionFormat,System.Threading.CancellationToken,System.IProgress{YouTubeDLPSharp.DownloadProgress},System.IProgress{System.String},YouTubeDLPSharp.Options.OptionSet,System.String)">

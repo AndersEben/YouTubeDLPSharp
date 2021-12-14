@@ -114,14 +114,14 @@ namespace YouTubeDLPSharp
         /// <param name="progress">A progress provider used to get download progress information.</param>
         /// <param name="output">A progress provider used to capture the standard output.</param>
         /// <param name="overrideOptions">Override options of the default option set for this run.</param>
-        /// <param name="postprocess">Neu</param>
+        /// <param name="WriteJson">Neu</param>
         /// <returns>A RunResult object containing the path to the downloaded and converted video.</returns>
         public async Task<RunResult<string>> RunVideoDownload(string url,
             string format = "bestvideo*+bestaudio/best",
             DownloadMergeFormat mergeFormat = DownloadMergeFormat.Unspecified,
             VideoRecodeFormat recodeFormat = VideoRecodeFormat.None,
             CancellationToken ct = default, IProgress<DownloadProgress> progress = null,
-            IProgress<string> output = null, OptionSet overrideOptions = null, string postprocess = null)
+            IProgress<string> output = null, OptionSet overrideOptions = null,bool WriteJson = false)
         {
             var opts = GetDownloadOptions();
             if (overrideOptions != null)
@@ -133,9 +133,9 @@ namespace YouTubeDLPSharp
             opts.MergeOutputFormat = mergeFormat;
             opts.RecodeVideo = recodeFormat;
 
-            if (postprocess != null)
+            if(WriteJson)
             {
-                opts.PostprocessorArgs = postprocess;
+                opts.WriteInfoJson = true;
             }
 
             string outputFile = String.Empty;
